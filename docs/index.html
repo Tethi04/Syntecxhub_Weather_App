@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel Weather App 🌸 - Web Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-card">
+        <h1>Pastel Weather 🌸</h1>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="weatherInfo" class="info-container">
+            <h2 id="cityName">Siliguri</h2>
+            <div id="temp" class="temp-val">28°C</div>
+            <p id="condition">Partly Cloudy</p>
+            <div class="details-row">
+                <div>Humidity: <span id="humidity">65%</span></div>
+                <div>Wind: <span id="wind">4.2 m/s</span></div>
+            </div>
+        </div>
+        <p id="errorMsg" class="error"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
