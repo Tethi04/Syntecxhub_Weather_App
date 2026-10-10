@@ -12,6 +12,8 @@
 
   <!-- App Screenshot Preview -->
   <img width="1079" height="2046" alt="Image" src="https://github.com/user-attachments/assets/ad8ce878-976c-4001-b65c-0ea6c12525ed" />
+---
+<img width="1079" height="2040" alt="Image" src="https://github.com/user-attachments/assets/504c7eb8-6752-48bd-b604-eeb3963f0cdc" />
 
 </div>
 
