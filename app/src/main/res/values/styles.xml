@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.PastelWeather" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/pastel_purple</item>
+        <item name="colorPrimaryVariant">@color/pastel_pink</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">#A5F3FC</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
