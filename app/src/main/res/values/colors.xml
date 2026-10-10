@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pastel_cyan">#A5F3FC</color>
+    <color name="pastel_purple">#C084FC</color>
+    <color name="pastel_pink">#F472B6</color>
+    <color name="text_dark">#1E293B</color>
+    <color name="text_muted">#64748B</color>
+    <color name="white">#FFFFFF</color>
+</resources>
