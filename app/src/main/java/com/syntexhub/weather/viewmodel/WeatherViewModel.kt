@@ -16,7 +16,8 @@ class WeatherViewModel : ViewModel() {
     private val _errorState = MutableLiveData<String?>()
     val errorState: LiveData<String?> get() = _errorState
 
-    private val apiKey = "YOUR_OPENWEATHERMAP_API_KEY" // Free key from openweathermap.org
+    private val apiKey = "7e6b9c36933b6082d00de55fa969e66d"
+ // Free key from openweathermap.org
 
     fun fetchWeather(cityName: String) {
         if (cityName.isBlank()) {
