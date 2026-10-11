@@ -1,26 +1,98 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #a5f3fc, #c084fc, #f472b6);
+    background: linear-gradient(135deg, #a5f3fc 0%, #c084fc 50%, #f472b6 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
 }
-.weather-card {
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(20px);
-    border: 1.5px solid rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 24px;
-    width: 350px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+
+/* Y2K Star Sparkles */
+.star {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 28px;
+    animation: float 3s ease-in-out infinite;
+}
+.s1 { top: 15%; left: 20%; animation-delay: 0s; }
+.s2 { bottom: 20%; right: 20%; animation-delay: 1.5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(15deg); }
+}
+
+/* Claymorphic 3D Card with Glass Frosting */
+.clay-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    padding: 35px;
+    border-radius: 32px;
+    width: 340px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12),
+                inset 0 4px 6px rgba(255, 255, 255, 0.8),
+                inset 0 -4px 6px rgba(192, 132, 252, 0.2);
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
-h1 { color: #1e293b; font-size: 22px; margin-bottom: 20px; }
-.search-box { display: flex; gap: 8px; margin-bottom: 20px; }
-input { flex: 1; padding: 10px 14px; border-radius: 12px; border: 1px solid #fff; background: rgba(255,255,255,0.7); outline: none; }
-button { background: #c084fc; color: white; border: none; padding: 10px 16px; border-radius: 12px; font-weight: bold; cursor: pointer; }
-.temp-val { font-size: 48px; font-weight: bold; color: #4c1d95; margin: 10px 0; }
-.details-row { display: flex; justify-content: space-around; margin-top: 20px; font-size: 14px; color: #475569; font-weight: bold; }
-.error { color: #ef4444; font-size: 13px; margin-top: 10px; font-weight: bold; }
+
+.y2k-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: #4c1d95;
+    letter-spacing: 1.5px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 4px 10px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+h1 { color: #1e293b; font-size: 24px; font-weight: 800; margin-bottom: 20px; }
+
+.search-box { display: flex; gap: 8px; margin-bottom: 24px; }
+input { 
+    flex: 1; 
+    padding: 12px 16px; 
+    border-radius: 20px; 
+    border: 1.5px solid #f472b6; 
+    background: rgba(255,255,255,0.75); 
+    outline: none; 
+    font-weight: 600;
+    color: #1e293b;
+}
+button { 
+    background: #c084fc; 
+    color: white; 
+    border: none; 
+    padding: 12px 18px; 
+    border-radius: 20px; 
+    font-weight: 800; 
+    cursor: pointer; 
+    box-shadow: 0 4px 12px rgba(192, 132, 252, 0.4);
+    transition: 0.2s;
+}
+button:hover { background: #a855f7; }
+
+.temp-val { font-size: 56px; font-weight: 800; color: #4c1d95; margin: 8px 0; }
+#cityName { color: #1e293b; font-size: 22px; font-weight: 800; letter-spacing: 0.5px; }
+#condition { color: #64748b; font-weight: 600; font-size: 14px; }
+
+.details-row { 
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 24px; 
+    padding-top: 18px;
+    border-top: 1.5px solid rgba(255,255,255,0.8);
+    font-size: 11px; 
+    color: #64748b; 
+    font-weight: 800; 
+}
+.details-row span { font-size: 16px; color: #1e293b; display: block; margin-top: 4px; }
+.error { color: #ef4444; font-size: 13px; margin-top: 12px; font-weight: bold; }
