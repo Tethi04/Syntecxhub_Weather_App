@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_pastel_gradient"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="20pi"
-    android:gravity="center_horizontal">
+    android:padding="20dp">
 
-    <!-- Search Bar -->
+    <!-- Y2K Header Tag -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="★ Y2K WEATHER SYSTEM ✨"
+        android:textColor="#4C1D95"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.15" />
+
+    <!-- Search Bar (Y2K Pill Style) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/etCityInput"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="52dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_glass_input"
-            android:hint="Enter city name..."
-            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_y2k_pill"
+            android:hint="Search cyber city..."
+            android:paddingHorizontal="18dp"
             android:textColor="#1E293B"
             android:textColorHint="#64748B"
             android:textSize="14sp" />
@@ -29,58 +41,62 @@
         <Button
             android:id="@+id/btnSearch"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="52dp"
             android:layout_marginStart="10dp"
             android:backgroundTint="#C084FC"
-            android:text="Search"
-            app:cornerRadius="14dp" xmlns:app="http://schemas.android.com/apk/res-auto" />
+            android:text="GO ⚡"
+            android:textStyle="bold"
+            app:cornerRadius="20dp" />
     </LinearLayout>
 
-    <!-- Weather Glass Card -->
+    <!-- Claymorphic Weather Card -->
     <LinearLayout
         android:id="@+id/cardWeather"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/bg_glass_card"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_clay_card"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="30dp">
+        android:padding="32dp">
 
         <TextView
             android:id="@+id/tvCityName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Siliguri"
+            android:text="TOKYO 🌸"
             android:textColor="#1E293B"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
 
         <TextView
             android:id="@+id/tvTemperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="28°C"
+            android:layout_marginTop="8dp"
+            android:text="29°C"
             android:textColor="#4C1D95"
-            android:textSize="54sp"
+            android:textSize="60sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvCondition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Partly Cloudy"
+            android:layout_marginTop="2dp"
+            android:text="Cyber Sparkle Glow"
             android:textColor="#64748B"
-            android:textSize="16sp" />
+            android:textSize="15sp"
+            android:textStyle="semibold" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginVertical="20dp"
+            android:layout_height="1.5dp"
+            android:layout_marginVertical="22dp"
             android:background="#E2E8F0" />
 
+        <!-- Metrics Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,16 +111,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Humidity"
+                    android:text="HUMIDITY"
                     android:textColor="#64748B"
-                    android:textSize="12sp" />
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/tvHumidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="65%"
+                    android:text="58%"
                     android:textColor="#1E293B"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -117,16 +134,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Wind Speed"
+                    android:text="WIND SPEED"
                     android:textColor="#64748B"
-                    android:textSize="12sp" />
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/tvWind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4.2 m/s"
+                    android:text="5.1 m/s"
                     android:textColor="#1E293B"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
