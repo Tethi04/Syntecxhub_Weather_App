@@ -3,35 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y2K Clay-Glass Weather App ✨</title>
+    <title>CyberPastel Y2K Weather Suite 🌸🛰️</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Y2K Floating Star Accents -->
-    <div class="star s1">✦</div>
-    <div class="star s2">★</div>
+    <div class="y2k-grid-bg"></div>
 
-    <div class="clay-card">
-        <span class="y2k-tag">★ CYBER WEATHER OS ✨</span>
-        <h1>Y2K Weather</h1>
-        
-        <div class="search-box">
-            <input type="text" id="cityInput" placeholder="Enter cyber city...">
-            <button id="searchBtn">GO ⚡</button>
+    <div class="main-container">
+        <!-- Header HUD -->
+        <header class="y2k-header">
+            <span class="hud-tag">SYS.WEATHER // v3.0</span>
+            <h1>WEATHER BOARD 🌸</h1>
+        </header>
+
+        <!-- Search HUD -->
+        <div class="search-clay-box">
+            <input type="text" id="cityInput" placeholder="ENTER CITY OR COORDINATES..." autocomplete="off">
+            <button id="searchBtn">SCAN ⚡</button>
         </div>
 
-        <div id="weatherInfo" class="info-container">
-            <h2 id="cityName">Tokyo 🌸</h2>
-            <div id="temp" class="temp-val">29°C</div>
-            <p id="condition">Cyber Sparkle Glow</p>
-            <div class="details-row">
-                <div>HUMIDITY <br><span id="humidity">58%</span></div>
-                <div>WIND <br><span id="wind">5.1 m/s</span></div>
+        <!-- Main Weather Glass-Clay Card -->
+        <div id="weatherCard" class="clay-glass-card">
+            <div class="card-top-row">
+                <h2 id="cityName">SILIGURI</h2>
+                <span id="weatherIconBadge" class="y2k-badge">CLOUDY ⛅</span>
+            </div>
+
+            <div class="temp-display-group">
+                <div id="temp" class="temp-val">28°C</div>
+                <div class="condition-box">
+                    <p id="condition">Partly Cloudy Atmosphere</p>
+                    <span id="feelsLike">Feels like: 30°C</span>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-clay-tile">
+                    <span class="label">HUMIDITY</span>
+                    <span id="humidity" class="val">65%</span>
+                </div>
+                <div class="metric-clay-tile">
+                    <span class="label">WIND SPEED</span>
+                    <span id="wind" class="val">4.2 m/s</span>
+                </div>
+                <div class="metric-clay-tile">
+                    <span class="label">PRESSURE</span>
+                    <span id="pressure" class="val">1012 hPa</span>
+                </div>
             </div>
         </div>
-        <p id="errorMsg" class="error"></p>
+
+        <!-- 5-Day Y2K Forecast Container -->
+        <div class="forecast-section">
+            <h3>5-DAY METRICS MATRIX 📈</h3>
+            <div id="forecastContainer" class="forecast-grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+
+        <p id="errorMsg" class="error-hud"></p>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
